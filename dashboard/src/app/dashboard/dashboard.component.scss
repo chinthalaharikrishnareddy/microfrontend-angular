@@ -1,0 +1,26 @@
+:host {
+  &.dark {
+    background: #444;
+    color: #fff;
+  }
+
+  &.light {
+    background: #f9f9f9;
+    color: #000;
+  }
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+
+  button {
+    padding: 0.5rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+}

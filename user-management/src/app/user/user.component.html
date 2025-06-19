@@ -1,0 +1,38 @@
+<div class="container p-4" [ngClass]="(theme$ | async) === 'dark' ? 'dark' : 'light'">
+  <h2 class="p-2">User Management</h2>
+  <app-shared></app-shared>
+  <form class="p-2" [formGroup]="userForm" (ngSubmit)="onSubmit()" *ngIf="isAdmin$ | async" role="form" aria-labelledby="user-form">
+    <div>
+      <label for="username">Username</label>
+      <input id="username" formControlName="username" aria-required="true" />
+      <div *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched">
+        Username is required and must be at least 3 characters.
+      </div>
+    </div>
+    <div>
+      <label for="role">Role</label>
+      <select id="role" formControlName="role" aria-required="true">
+        <option value="admin">Admin</option>
+        <option value="viewer">Viewer</option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="userForm.invalid">Add User</button>
+  </form>
+  <div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of users">
+          <td>{{item?.id}}</td>
+          <td>{{item?.login | capitalizeFirst }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

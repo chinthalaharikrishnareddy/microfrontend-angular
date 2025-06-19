@@ -1,0 +1,45 @@
+:host {
+  &.dark {
+    background: #444;
+    color: #fff;
+  }
+  &.light {
+    background: #f9f9f9;
+    color: #000;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 1rem;
+  input,
+  select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &[disabled] {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+}

@@ -1,0 +1,15 @@
+<div [ngClass]="(theme$ | async) === 'dark' ? 'dark' : 'light'">
+  <!-- <header>
+    <h1>Microfrontend Dashboard</h1>
+    <nav>
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/users" *ngIf="isAdmin$ | async">Users</a>
+      <button (click)="toggleTheme()">Toggle Theme</button>
+      <button (click)="logout()">Logout</button>
+    </nav>
+  </header> -->
+  <main>
+    <router-outlet></router-outlet>
+    <!-- <app-shared></app-shared> -->
+  </main>
+</div>

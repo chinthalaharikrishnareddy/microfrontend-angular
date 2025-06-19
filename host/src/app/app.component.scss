@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  &.dark {
+    background: #333;
+    color: #fff;
+  }
+  &.light {
+    background: #fff;
+    color: #000;
+  }
+}
+
+header {
+  padding: 1rem;
+  background: #f0f0f0;
+  nav {
+    display: flex;
+    gap: 1rem;
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+    button {
+      padding: 0.5rem;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+main {
+  padding: 1rem;
+}
