@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { StoreModule } from '@ngrx/store';
 import { AppState } from '../../../host/src/app/auth';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [],
@@ -11,6 +13,7 @@ import { AppState } from '../../../host/src/app/auth';
     BrowserModule,
     UserModule,
     StoreModule.forRoot({}, { metaReducers: [] }),
+    RouterModule.forChild(routes)
   ],
   bootstrap: [],
 })

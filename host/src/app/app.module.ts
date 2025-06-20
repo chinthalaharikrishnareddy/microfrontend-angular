@@ -12,8 +12,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { SharedModule } from './shared/shared.module';
 import { authReducer } from './auth/auth.reducer';
 import { AuthEffects } from './auth/auth.effects';
-
+import { LayoutComponent } from './layout/layout.component';
 @NgModule({
+  declarations:[],
   imports: [
     BrowserModule,
     CommonModule,
@@ -24,6 +25,7 @@ import { AuthEffects } from './auth/auth.effects';
     StoreModule.forRoot({ auth: authReducer }),
     EffectsModule.forRoot([AuthEffects]),
     SharedModule,
+    LayoutComponent
   ],
 })
 export class AppModule {}

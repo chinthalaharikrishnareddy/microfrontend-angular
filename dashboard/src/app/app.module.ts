@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { StoreModule } from '@ngrx/store';
 // import { AppState } from '../../../host/src/app/auth';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [],
@@ -12,6 +15,7 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     // DashboardModule,
     StoreModule.forRoot({}, { metaReducers: [] }),
+    RouterModule.forChild(routes)
   ],
   bootstrap: [],
 })

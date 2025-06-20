@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { login, loginSuccess, loginFailure, logout, toggleTheme } from './auth.actions';
+import { login, loginSuccess, loginFailure, logout, toggleTheme, setUser } from './auth.actions'; // Include setUser
 
 export interface AuthState {
   user: { username: string; role: string } | null;
@@ -39,5 +39,11 @@ export const authReducer = createReducer(
   on(toggleTheme, (state, { theme }) => ({
     ...state,
     theme,
+  })),
+  on(setUser, (state, { user }) => ({ // Handle setUser action
+    ...state,
+    user,
+    loading: false,
+    error: null,
   }))
 );

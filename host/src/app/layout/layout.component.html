@@ -1,0 +1,14 @@
+<header>
+  <h1>Welcome, {{ username }}!</h1>
+  <nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a> |
+    <a routerLink="/users" routerLinkActive="active">User Management</a> |
+    <a routerLink="/logout" (click)="onLogout()">Logout</a>
+  </nav>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <p>&copy; 2025 Your Company. All rights reserved.</p>
+</footer>

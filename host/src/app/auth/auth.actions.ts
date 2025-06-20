@@ -21,3 +21,4 @@ export const toggleTheme = createAction(
   '[Auth] Toggle Theme',
   props<{ theme: 'light' | 'dark' }>()
 );
+export const setUser = createAction('[Auth] Set User', props<{ user: { username: string; role: string } }>());
